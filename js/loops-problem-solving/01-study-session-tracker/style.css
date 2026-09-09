@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f4f1ea;
+}
+
+.app {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.app-header {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.task-input-section {
+    padding: 24px;
+    margin-bottom: 25px;
+    background: white;
+    border: 1px solid #ddd7cb;
+    border-radius: 16px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #bbb4a8;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 2px solid #777;
+    outline-offset: 2px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.task-section {
+    padding: 24px;
+    background: white;
+    border: 1px solid #ddd7cb;
+    border-radius: 16px;
+}
+
+.task-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+#task-count {
+    font-size: 0.9rem;
+}
+
+#task-list {
+    list-style: none;
+}
+
+#task-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e0d7;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+#empty-message {
+    line-height: 1.5;
+    text-align: center;
+    padding: 25px 0 10px;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

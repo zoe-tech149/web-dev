@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Electricity Bill Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+    <main>
+
+      <h1>Electricity Bill Calculator</h1>
+      
+      <!-- Electricity input -->
+      <label for="">Electricity used: </label>
+
+      <input 
+        type="number"
+        id="electricity"
+        min="0"
+      >
+     
+      <!-- Calculation action -->
+      <button id="calculateButton">Calculate Bill</button>
+
+
+      <!-- Results output -->
+      <div id="result">
+
+        <p id="electricityResult"></p>
+
+        <p id="tierOneResult"></p>
+
+        <p id="tierTwoResult"></p>
+
+        <p id="tierThreeResult"></p>
+
+        <p id="totalResult"></p>
+
+      </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

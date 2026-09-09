@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Study Session Tracker</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    
+    <main class="app">
+
+      <header class="app-header">
+
+        <p class="eyebrow">STUDY SESSION</p>
+
+        <h1>Today's Mission</h1>
+
+        <p class="subtitle">
+          Add the tasks you want to complete during your study session.
+        </p>
+
+      </header>
+
+      <section class="task-input-sction">
+
+        <form id="task-form">
+          
+          <label for="task-input">Study task</label>
+
+          <div class="input-group">
+
+            <input
+              type="text"
+              id="task-input"
+              placeholder="e.g. Practice JavaScript loops"
+              autocomplete="off"
+            >
+
+            <button type="submit">Add Task</button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <section class="task-section">
+
+        <div class="task-section-header">
+          
+          <h2>Your Tasks</h2>
+
+          <span id="task-count">0 tasks</span>
+
+        </div>
+        
+        <ul id="task-list"></ul>
+
+        <p id="empty-message">No tasks yet. Add your first study task.</p>
+
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  
+  </body>
+
+</html>
