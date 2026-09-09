@@ -1,9 +1,12 @@
 /* Select the article that represents the student profile card */
-
 article{
+
   /* Set the width of the content area of the card */
   width: 300px;
 
+  /* Create space between the content and the border */
+  padding: 20px;
+  
   /* Create a visible boundary around the card */
   border: 2px solid black;
 }
