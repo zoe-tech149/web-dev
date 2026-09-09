@@ -1,6 +1,9 @@
 /* Select the article that represents the student profile card */
 article{
 
+  /* Make the entire border box 300px wide */
+  box-sizing: border-box;
+
   /* Set the width of the content area of the card */
   width: 300px;
 
