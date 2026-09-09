@@ -6,7 +6,10 @@ article{
 
   /* Create space between the content and the border */
   padding: 20px;
-  
+
   /* Create a visible boundary around the card */
   border: 2px solid black;
+
+  /* Creates space between the card and surrounding elements  */
+  margin: 30px
 }
