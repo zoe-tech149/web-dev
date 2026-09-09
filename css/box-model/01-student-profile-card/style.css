@@ -7,6 +7,9 @@ article{
   /* Set the width of the content area of the card */
   width: 300px;
 
+  /* Give the card a minimum vertical size. */
+    min-height: 200px;
+
   /* Create space between the content and the border */
   padding: 20px;
 
