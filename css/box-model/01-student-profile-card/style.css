@@ -8,7 +8,7 @@ article{
   width: 300px;
 
   /* Give the card a minimum vertical size. */
-    min-height: 200px;
+  min-height: 200px;
 
   /* Create space between the content and the border */
   padding: 20px;
@@ -17,5 +17,9 @@ article{
   border: 2px solid black;
 
   /* Creates space between the card and surrounding elements  */
-  margin: 30px
+  margin: 30px;
+
+  /* Control content that extends beyond the box. */
+  overflow: auto;
+
 }

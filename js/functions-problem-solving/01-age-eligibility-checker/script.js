@@ -5,7 +5,8 @@ const ageInput = document.querySelector("#age");
 const checkButton = document.querySelector("#checkButton");
 
 // Find the result area
-const result = document.querySelector("#result");
+const result = document.querySelector
+("#result");
 
 // Set the minimum eligible age
 const minimumAge = 18;
