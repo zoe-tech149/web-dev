@@ -9,3 +9,6 @@ console.log(groceryList[1]);
 
 // Display the third grocery item from the array.
 console.log(groceryList[2]);
+
+// Display the number of elements currently in the grocery list.
+console.log(groceryList.length);
