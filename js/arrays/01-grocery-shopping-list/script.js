@@ -1,14 +1,8 @@
 // Store the grocery items in an array
 const groceryList = ["Milk", "Bread", "Eggs"];
 
-// Display the first grocery item from the array.
-console.log(groceryList[0]);
+// Add a new grocery item to the end of the array
+groceryList.push("Apples");
 
-// Display the second grocery item from the array.
-console.log(groceryList[1]);
-
-// Display the third grocery item from the array.
-console.log(groceryList[2]);
-
-// Display the number of elements currently in the grocery list.
-console.log(groceryList.length);
+// Display the updated grocery list
+console.log(groceryList);
