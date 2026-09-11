@@ -15,6 +15,15 @@ function displayGroceries(groceryToShake = "") {
   // Remove the current list items before displaying the updated array.
   groceryListElement.innerHTML = "";
 
+  // Check whether the grocery list contains no items.
+  if (groceryList.length === 0) {
+    // Display a message when the grocery list is empty.
+    groceryListElement.textContent = "Your grocery list is empty.";
+
+    // Stop the function because there are no groceries to display.
+    return;
+  }
+
   // Visit each grocery item in the array.
   for (let index = 0; index < groceryList.length; index++) {
     // Create a new list item element.
