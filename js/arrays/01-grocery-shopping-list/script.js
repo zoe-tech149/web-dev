@@ -29,6 +29,31 @@ function displayGroceries(groceryToShake = "") {
     // Set the text displayed on the edit button.
     editButton.textContent = "Edit";
 
+    // Listen for a click on this grocery's Edit button.
+    editButton.addEventListener("click", function () {
+      // Ask the user for the new grocery name.
+      const newGrocery = prompt("Enter the new grocery name:");
+
+      // Stop the function if the user cancels the edit.
+      if (newGrocery === null) {
+        return;
+      }
+
+      // Remove surrounding whitespace from the new grocery name.
+      const updatedGrocery = newGrocery.trim();
+
+      // Stop the function if the new grocery name is empty.
+      if (updatedGrocery === "") {
+        return;
+      }
+
+      // Replace the grocery at the selected index with the new value.
+      groceryList[index] = newGrocery;
+
+      // Display the updated grocery list on the webpage.
+      displayGroceries();
+    });
+
     // Create a button for removing the grocery item.
     const removeButton = document.createElement("button");
 
