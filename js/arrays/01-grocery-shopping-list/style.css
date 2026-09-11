@@ -1,0 +1,27 @@
+/* Animate a grocery item when the user tries to add a duplicate. */
+.shake {
+  animation: shake 0.4s;
+}
+
+/* Define the movement used by the shake animation. */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+
+  75% {
+    transform: translateX(-6px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

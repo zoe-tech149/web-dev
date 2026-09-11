@@ -11,7 +11,7 @@ const groceryInput = document.querySelector("#groceryInput");
 const addButton = document.querySelector("#addButton");
 
 // Display all grocery items from the array on the webpage.
-function displayGroceries() {
+function displayGroceries(groceryToShake = "") {
   // Remove the current list items before displaying the updated array
   groceryListElement.innerHTML = "";
 
@@ -38,6 +38,12 @@ function displayGroceries() {
       displayGroceries();
     });
 
+    // Check whether this grocery should receive the shake animation.
+    if (groceryList[index] === groceryToShake) {
+      // Add the shake class to the matching grocery item.
+      listItem.classList.add("shake");
+    }
+
     // Add the remove button inside the list item.
     listItem.appendChild(removeButton);
 
@@ -56,7 +62,19 @@ addButton.addEventListener("click", function () {
     return;
   }
 
-  // Add the grocery item to the end of the array
+  // Find the position if the grocery in the array
+  const groceryIndex = groceryList.indexOf(grocery);
+
+  // Stop the function if the grocery is already in the array
+  if (groceryIndex !== -1) {
+    // Display the list and shake the grocery that already exists.
+    displayGroceries(grocery);
+
+    // Stop the function because the grocery is already in the list.
+    return;
+  }
+
+  // Add the new grocery item to the end of the array
   groceryList.push(grocery);
 
   // Display the updated grocery list on the webpage.
