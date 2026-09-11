@@ -23,6 +23,12 @@ function displayGroceries(groceryToShake = "") {
     // Put the current grocery name inside the list item.
     listItem.textContent = groceryList[index];
 
+    // Create a button for editing the grocery item.
+    const editButton = document.createElement("button");
+
+    // Set the text displayed on the edit button.
+    editButton.textContent = "Edit";
+
     // Create a button for removing the grocery item.
     const removeButton = document.createElement("button");
 
@@ -43,6 +49,9 @@ function displayGroceries(groceryToShake = "") {
       // Add the shake class to the matching grocery item.
       listItem.classList.add("shake");
     }
+
+    // Add the edit button inside the list item.
+    listItem.appendChild(editButton);
 
     // Add the remove button inside the list item.
     listItem.appendChild(removeButton);
