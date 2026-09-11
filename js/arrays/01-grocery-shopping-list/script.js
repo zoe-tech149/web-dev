@@ -4,15 +4,15 @@ const groceryList = ["Milk", "Bread", "Eggs", "Apples"];
 // Find the unordered list where grocery items will be displayed.
 const groceryListElement = document.querySelector("#groceryList");
 
-// Find the input element where the user types a grocery
+// Find the input element where the user types a grocery.
 const groceryInput = document.querySelector("#groceryInput");
 
-// Find the Add Buttton
+// Find the Add button.
 const addButton = document.querySelector("#addButton");
 
 // Display all grocery items from the array on the webpage.
 function displayGroceries(groceryToShake = "") {
-  // Remove the current list items before displaying the updated array
+  // Remove the current list items before displaying the updated array.
   groceryListElement.innerHTML = "";
 
   // Visit each grocery item in the array.
@@ -31,51 +31,75 @@ function displayGroceries(groceryToShake = "") {
 
     // Listen for a click on this grocery's Edit button.
     editButton.addEventListener("click", function () {
-      // Ask the user for the new grocery name.
-      const newGrocery = prompt("Enter the new grocery name:");
+      // Hide the Edit button while the grocery is being edited.
+      editButton.style.display = "none";
 
-      // Stop the function if the user cancels the edit.
-      if (newGrocery === null) {
-        return;
-      }
+      // Create an input element for entering the updated grocery name.
+      const editInput = document.createElement("input");
 
-      // Remove surrounding whitespace from the new grocery name.
-      const updatedGrocery = newGrocery.trim();
+      // Set the input type to text.
+      editInput.type = "text";
 
-      // Stop the function if the new grocery name is empty.
-      if (updatedGrocery === "") {
-        return;
-      }
+      // Put the current grocery name into the edit input.
+      editInput.value = groceryList[index];
 
-      // Find another grocery that matches the new name.
-      const duplicateIndex = groceryList.findIndex(function (item, itemIndex) {
-        // Ignore the grocery currently being edited and compare names case-insensitively.
-        return (
-          itemIndex !== index &&
-          item.toLowerCase() === updatedGrocery.toLowerCase()
+      // Create a button for saving the edited grocery.
+      const saveButton = document.createElement("button");
+
+      // Set the text displayed on the Save button.
+      saveButton.textContent = "Save";
+
+      // Listen for a click on the Save button.
+      saveButton.addEventListener("click", function () {
+        // Get the updated grocery name and remove surrounding whitespace.
+        const updatedGrocery = editInput.value.trim();
+
+        // Stop the function if the updated grocery name is empty.
+        if (updatedGrocery === "") {
+          return;
+        }
+
+        // Find another grocery that matches the updated name.
+        const duplicateIndex = groceryList.findIndex(
+          function (item, itemIndex) {
+            // Ignore the grocery being edited and compare names case-insensitively.
+            return (
+              itemIndex !== index &&
+              item.toLowerCase() === updatedGrocery.toLowerCase()
+            );
+          },
         );
+
+        // Stop the function if another grocery already has the updated name.
+        if (duplicateIndex !== -1) {
+          // Display the list and shake the existing duplicate grocery.
+          displayGroceries(updatedGrocery);
+
+          // Stop the function because the new grocery name is already in use.
+          return;
+        }
+
+        // Replace the grocery at the selected index with the updated value.
+        groceryList[index] = updatedGrocery;
+
+        // Display the updated grocery list on the webpage.
+        displayGroceries();
       });
 
-      // Stop the function if another grocery already has the new name.
-      if (duplicateIndex !== -1) {
-        // Display the list and shake the existing duplicate grocery.
-        displayGroceries(updatedGrocery);
+      // Add the edit input inside the list item.
+      listItem.appendChild(editInput);
 
-        // Stop the function because the new grocery name is already in use.
-        return;
-      }
+      // Add the Save button inside the list item.
+      listItem.appendChild(saveButton);
 
-      // Replace the grocery at the selected index with the new value.
-      groceryList[index] = newGrocery;
-
-      // Display the updated grocery list on the webpage.
-      displayGroceries();
+      // Place the cursor inside the edit input.
+      editInput.focus();
     });
 
     // Create a button for removing the grocery item.
     const removeButton = document.createElement("button");
 
-    // Set the text displayed on the remove button.
+    // Set the text displayed on the Remove button.
     removeButton.textContent = "Remove";
 
     // Listen for a click on this grocery's Remove button.
@@ -93,10 +117,10 @@ function displayGroceries(groceryToShake = "") {
       listItem.classList.add("shake");
     }
 
-    // Add the edit button inside the list item.
+    // Add the Edit button inside the list item.
     listItem.appendChild(editButton);
 
-    // Add the remove button inside the list item.
+    // Add the Remove button inside the list item.
     listItem.appendChild(removeButton);
 
     // Add the list item to the grocery list on the webpage.
@@ -104,38 +128,38 @@ function displayGroceries(groceryToShake = "") {
   }
 }
 
-// Listen for a cick on the Add Button
+// Listen for a click on the Add button.
 addButton.addEventListener("click", function () {
-  // Get the current value inside the input element.
+  // Get the current value inside the input and remove surrounding whitespace.
   const grocery = groceryInput.value.trim();
 
-  // Stop the function if the user did not enter a grocery item
+  // Stop the function if the user did not enter a grocery item.
   if (grocery === "") {
     return;
   }
 
-  // Find the index of a matching grocery without caring about capitalization.
+  // Find a grocery with the same name without caring about capitalization.
   const groceryIndex = groceryList.findIndex(function (item) {
-    // Compare the existing grocery and the new grocery in lowercase.
+    // Compare the existing grocery and new grocery in lowercase.
     return item.toLowerCase() === grocery.toLowerCase();
   });
 
-  // Stop the function if the grocery is already in the array
+  // Stop the function if the grocery is already in the array.
   if (groceryIndex !== -1) {
-    // Display the list and shake the grocery that already exists.
+    // Display the list and shake the existing duplicate grocery.
     displayGroceries(grocery);
 
     // Stop the function because the grocery is already in the list.
     return;
   }
 
-  // Add the new grocery item to the end of the array
+  // Add the new grocery item to the end of the array.
   groceryList.push(grocery);
 
   // Display the updated grocery list on the webpage.
   displayGroceries();
 
-  // Clear the input after successfully adding the grocery
+  // Clear the input after successfully adding the grocery.
   groceryInput.value = "";
 });
 
