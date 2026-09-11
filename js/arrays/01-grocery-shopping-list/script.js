@@ -4,6 +4,12 @@ const groceryList = ["Milk", "Bread", "Eggs", "Apples"];
 // Find the unordered list where grocery items will be displayed.
 const groceryListElement = document.querySelector("#groceryList");
 
+// Find the input element where the user types a grocery
+const groceryInput = document.querySelector("#groceryInput");
+
+// Find the Add Buttton
+const addButton = document.querySelector("#addButton");
+
 // Visit each grocery item in the array.
 for (let index = 0; index < groceryList.length; index++) {
   // Create a new list item element.
@@ -15,3 +21,15 @@ for (let index = 0; index < groceryList.length; index++) {
   // Add the list item to the grocery list on the webpage.
   groceryListElement.appendChild(listItem);
 }
+
+// Listen for a cick on the Add Button
+addButton.addEventListener("click", function () {
+  // Get the current value inside the input element.
+  const grocery = groceryInput.value;
+
+  // Add the grocery item to the end of the array
+  groceryList.push(grocery);
+
+  // Display the entered grocery in the console
+  console.log(groceryList);
+});
