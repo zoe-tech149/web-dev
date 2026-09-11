@@ -10,16 +10,22 @@ const groceryInput = document.querySelector("#groceryInput");
 // Find the Add Buttton
 const addButton = document.querySelector("#addButton");
 
-// Visit each grocery item in the array.
-for (let index = 0; index < groceryList.length; index++) {
-  // Create a new list item element.
-  const listItem = document.createElement("li");
+// Display all grocery items from the array on the webpage.
+function displayGroceries() {
+  // Remove the current list items before displaying the updated array
+  groceryListElement.innerHTML = "";
 
-  // Put the current grocery name inside the list item.
-  listItem.textContent = groceryList[index];
+  // Visit each grocery item in the array.
+  for (let index = 0; index < groceryList.length; index++) {
+    // Create a new list item element.
+    const listItem = document.createElement("li");
 
-  // Add the list item to the grocery list on the webpage.
-  groceryListElement.appendChild(listItem);
+    // Put the current grocery name inside the list item.
+    listItem.textContent = groceryList[index];
+
+    // Add the list item to the grocery list on the webpage.
+    groceryListElement.appendChild(listItem);
+  }
 }
 
 // Listen for a cick on the Add Button
@@ -30,6 +36,9 @@ addButton.addEventListener("click", function () {
   // Add the grocery item to the end of the array
   groceryList.push(grocery);
 
-  // Display the entered grocery in the console
-  console.log(groceryList);
+  // Display the updated grocery list on the webpage.
+  displayGroceries();
 });
+
+// Display the initial grocery list when the page loads.
+displayGroceries();
