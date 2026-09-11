@@ -29,6 +29,15 @@ function displayGroceries() {
     // Set the text displayed on the remove button.
     removeButton.textContent = "Remove";
 
+    // Listen for a click on this grocery's Remove button.
+    removeButton.addEventListener("click", function () {
+      // Remove the grocery at this button's index.
+      groceryList.splice(index, 1);
+
+      // Display the updated grocery list.
+      displayGroceries();
+    });
+
     // Add the remove button inside the list item.
     listItem.appendChild(removeButton);
 
