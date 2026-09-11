@@ -31,7 +31,12 @@ function displayGroceries() {
 // Listen for a cick on the Add Button
 addButton.addEventListener("click", function () {
   // Get the current value inside the input element.
-  const grocery = groceryInput.value;
+  const grocery = groceryInput.value.trim();
+
+  // Stop the function if the user did not enter a grocery item
+  if (grocery === "") {
+    return;
+  }
 
   // Add the grocery item to the end of the array
   groceryList.push(grocery);
