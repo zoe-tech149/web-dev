@@ -47,6 +47,24 @@ function displayGroceries(groceryToShake = "") {
         return;
       }
 
+      // Find another grocery that matches the new name.
+      const duplicateIndex = groceryList.findIndex(function (item, itemIndex) {
+        // Ignore the grocery currently being edited and compare names case-insensitively.
+        return (
+          itemIndex !== index &&
+          item.toLowerCase() === updatedGrocery.toLowerCase()
+        );
+      });
+
+      // Stop the function if another grocery already has the new name.
+      if (duplicateIndex !== -1) {
+        // Display the list and shake the existing duplicate grocery.
+        displayGroceries(updatedGrocery);
+
+        // Stop the function because the new grocery name is already in use.
+        return;
+      }
+
       // Replace the grocery at the selected index with the new value.
       groceryList[index] = newGrocery;
 
