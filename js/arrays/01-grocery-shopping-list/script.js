@@ -23,6 +23,15 @@ function displayGroceries() {
     // Put the current grocery name inside the list item.
     listItem.textContent = groceryList[index];
 
+    // Create a button for removing the grocery item.
+    const removeButton = document.createElement("button");
+
+    // Set the text displayed on the remove button.
+    removeButton.textContent = "Remove";
+
+    // Add the remove button inside the list item.
+    listItem.appendChild(removeButton);
+
     // Add the list item to the grocery list on the webpage.
     groceryListElement.appendChild(listItem);
   }
