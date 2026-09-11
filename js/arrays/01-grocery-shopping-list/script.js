@@ -39,7 +39,7 @@ function displayGroceries(groceryToShake = "") {
     });
 
     // Check whether this grocery should receive the shake animation.
-    if (groceryList[index] === groceryToShake) {
+    if (groceryList[index].toLowerCase() === groceryToShake.toLowerCase()) {
       // Add the shake class to the matching grocery item.
       listItem.classList.add("shake");
     }
@@ -62,8 +62,11 @@ addButton.addEventListener("click", function () {
     return;
   }
 
-  // Find the position if the grocery in the array
-  const groceryIndex = groceryList.indexOf(grocery);
+  // Find the index of a matching grocery without caring about capitalization.
+  const groceryIndex = groceryList.findIndex(function (item) {
+    // Compare the existing grocery and the new grocery in lowercase.
+    return item.toLowerCase() === grocery.toLowerCase();
+  });
 
   // Stop the function if the grocery is already in the array
   if (groceryIndex !== -1) {
