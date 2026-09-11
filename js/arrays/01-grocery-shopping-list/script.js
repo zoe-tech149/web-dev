@@ -43,6 +43,9 @@ addButton.addEventListener("click", function () {
 
   // Display the updated grocery list on the webpage.
   displayGroceries();
+
+  // Clear the input after successfully adding the grocery
+  groceryInput.value = "";
 });
 
 // Display the initial grocery list when the page loads.
