@@ -1,17 +1,17 @@
-// Store the grocery items in an array
+// Store the grocery items in an array.
 const groceryList = ["Milk", "Bread", "Eggs", "Apples"];
 
-// Find the position of the grocery item we want to remove
-const groceryIndex = groceryList.indexOf("Bread");
+// Find the unordered list where grocery items will be displayed.
+const groceryListElement = document.querySelector("#groceryList");
 
-// Check whether the grocery items was found
-if (groceryIndex !== -1) {
-  // Remove one grocery item from the position that was found
-  groceryList.splice(groceryIndex, 1);
-}
-
-// Visit each element in the grocery list
+// Visit each grocery item in the array.
 for (let index = 0; index < groceryList.length; index++) {
-  // Display the current grocery item
-  console.log(groceryList[index]);
+  // Create a new list item element.
+  const listItem = document.createElement("li");
+
+  // Put the current grocery name inside the list item.
+  listItem.textContent = groceryList[index];
+
+  // Add the list item to the grocery list on the webpage.
+  groceryListElement.appendChild(listItem);
 }
