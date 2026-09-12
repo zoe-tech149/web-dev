@@ -23,3 +23,9 @@ const studentGradeElement = document.querySelector("#studentGrade");
 
 // Display the student's grade.
 studentGradeElement.textContent = student.grade;
+
+// Find the element where the student's school will be displayed.
+const studentSchoolElement = document.querySelector("#studentSchool");
+
+// Display the student's school.
+studentSchoolElement.textContent = student.school;
