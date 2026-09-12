@@ -30,8 +30,15 @@ const studentSchoolElement = document.querySelector("#studentSchool");
 // Display the student's school.
 studentSchoolElement.textContent = student.school;
 
+// change the existing grade property's vale
 student.grade = 13;
 studentGradeElement.textContent = student.grade;
 
+// Add a new property in the object
 student.age = 18;
-console.log(student.age);
+
+// Find and display the new property on the web page
+const studentAgeElement = document.querySelector("#studentAge");
+studentAgeElement.textContent = student.age;
+
+
