@@ -17,3 +17,9 @@ const surnameElement = document.querySelector("#studentSurname");
 
 // Display the student's surname.
 surnameElement.textContent = student.surname;
+
+// Find the element where the student's grade will be displayed.
+const studentGradeElement = document.querySelector("#studentGrade");
+
+// Display the student's grade.
+studentGradeElement.textContent = student.grade;
