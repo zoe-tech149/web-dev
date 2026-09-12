@@ -11,3 +11,9 @@ const studentNameElement = document.querySelector("#studentName");
 
 // Display the student's name
 studentNameElement.textContent = student.name;
+
+// Find the element where the student's surname will be displayed.
+const surnameElement = document.querySelector("#studentSurname");
+
+// Display the student's surname.
+surnameElement.textContent = student.surname;
