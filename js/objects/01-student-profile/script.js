@@ -31,5 +31,7 @@ const studentSchoolElement = document.querySelector("#studentSchool");
 studentSchoolElement.textContent = student.school;
 
 student.grade = 13;
-
 studentGradeElement.textContent = student.grade;
+
+student.age = 18;
+console.log(student.age);
