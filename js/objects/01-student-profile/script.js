@@ -41,4 +41,11 @@ student.age = 18;
 const studentAgeElement = document.querySelector("#studentAge");
 studentAgeElement.textContent = student.age;
 
+// Delete a property from the object
+delete student.age;
+
+// Remove the displayed value
+studentAgeElement.textContent = "";
+
+
 
