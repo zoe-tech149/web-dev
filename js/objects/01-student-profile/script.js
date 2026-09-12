@@ -29,3 +29,7 @@ const studentSchoolElement = document.querySelector("#studentSchool");
 
 // Display the student's school.
 studentSchoolElement.textContent = student.school;
+
+student.grade = 13;
+
+studentGradeElement.textContent = student.grade;
