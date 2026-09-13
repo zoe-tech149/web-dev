@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Number Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+    <main class="app">
+
+      <header class="app-header">
+
+        <p class="eyebrow">DATA TOOL</p>
+
+        <h1>Number Analyzer</h1>
+
+        <p class="intro">
+          Enter a collection of numbers and let the program
+          calculate useful statistics for you.
+        </p>
+
+      </header>
+
+      <section class="input-panel" aria-labelledby="input-heading">
+
+        <h2 id="input-heading">Add a number</h2>
+
+        <form id="number-form">
+        
+          <label for="number-input">
+            Number
+          </label>
+
+          <div class="input-group">
+
+            <input 
+              type="number"
+              id="number-input"
+              placeholder="e.g. 25"
+              required
+            >
+
+            <button type="submit">
+              Add Number
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <section class="number-panel" aria-labelledby="numbers-heading">
+
+        <div class="section-heading">
+
+          <div>
+
+            <p class="section-label">COLLECTION</p>
+
+            <h2 id="numbers-heading">Your Numbers</h2>
+
+          </div>
+
+          <output id="number-count">
+            0 numbers
+          </output>
+
+        </div>
+
+        <ol id="number-list"></ol>
+
+        <p id="empty-message">
+          No numbers yet. Add your first number above.
+        </p>
+
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
