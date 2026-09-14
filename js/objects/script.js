@@ -47,5 +47,12 @@ delete student.age;
 // Remove the displayed value
 studentAgeElement.textContent = "";
 
+// Find th whole paragraph
+const studentAgeRow = document.querySelector("#studentAgeRow");
+
+// Remove the entire age row
+studentAgeRow.remove();
+
+
 
 
