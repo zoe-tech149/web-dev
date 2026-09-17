@@ -6,31 +6,32 @@ const student = {
   school: "Sunflower High School",
 };
 
-// Find the element where the student's name will be displayed
-const studentNameElement = document.querySelector("#studentName"); // <span id="studentName">Wandile</span>
-
 // Find the element where the student's surname will be displayed.
-const surnameElement = document.querySelector("#studentSurname"); // <span id="studentSurname">Mjweni</span>
+const surnameElement = document.querySelector("#studentSurname");
 
 // Find the element where the student's grade will be displayed.
-const studentGradeElement = document.querySelector("#studentGrade"); // <span id="studentGrade">12</span>
+const studentGradeElement = document.querySelector("#studentGrade");
 
 // Find the element where the student's school will be displayed.
-const studentSchoolElement = document.querySelector("#studentSchool"); // <span id="studentSchool">Sunflower High School</span>
+const studentSchoolElement = document.querySelector("#studentSchool");
 
-const editProfileBtn = document.querySelector("#editProfileBtn"); // <button id="editProfileBtn">Edit Profile</button>
+const editProfileBtn = document.querySelector("#editProfileBtn");
 
-// Display the student's name
-studentNameElement.textContent = student.name; // Wandile
+// DISPLAY NAME PROPERTY
 
-// Display the student's surname.
-surnameElement.textContent = student.surname; // Mjweni
+// Find the element where the student's name will be displayed
+const studentNameElement = document.querySelector("#studentName"); 
+console.log(studentNameElement); //<span id="studentName" class="text-span" data-property="name"></span>
 
-// Display the student's grade.
-studentGradeElement.textContent = student.grade; // 12
+// Access a property from student object
+student.name;
+console.log(student.name); // Wandile
 
-// Display the student's school.
-studentSchoolElement.textContent = student.school; // Sunflower High School
+// Put a value into the name span element
+studentNameElement.textContent = student.name; 
+console.log(studentNameElement); 
+
+
 
 // EDIT PROFILE INFORMATION
 editProfileBtn.addEventListener("click", function () {
@@ -48,7 +49,14 @@ editProfileBtn.addEventListener("click", function () {
 
     // Replace the span with the new input field
     textSpan.replaceWith(inputField);
+
+    const inputFields = document.querySelectorAll("#input").value;
+    console.log(inputFields);
+  
   });
+
+  // Create a new button element
+  const SaveChangesBtn = document.createElement("button");
 
   // Remove the displayed value for update
   // studentNameElement.textContent = "";
