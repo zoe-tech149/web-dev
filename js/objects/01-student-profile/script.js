@@ -17,6 +17,15 @@ student.name;
 // Put a value into the name span element
 studentNameElement.textContent = student.name; 
 
+// Using the property name
+const property = studentNameElement.dataset.property;
+
+studentNameElement.textContent = student[property];
+
+const studentElements = document.querySelectorAll(".text-span");
+console.log(studentElements); // NodeList []
+
+
 // DISPLAY SURNAME PROPERTY
 
 // Find the element where the student's name will be displayed
