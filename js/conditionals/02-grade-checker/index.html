@@ -14,22 +14,27 @@
 
   <body>
 
-    <h1>Grade Checker</h1>
+    <main>
+      
+      <h1 class="heading">Grade Checker</h1>
     
-    <!-- INPUT -->
-    <label for="gradeInput">Grade:</label>
-    <input 
-      type="number" 
-      id="gradeInput"
-      min="0" 
-      max="100"
-    >
+      <!-- INPUT -->
+      <label for="gradeInput">Grade:</label><br><br>
+      <input 
+        type="number" 
+        id="gradeInput"
+        min="0" 
+        max="100"
+      >
+      
+      <br><br>
+      <!-- EVALUATION  -->
+      <button id="checkButton">Check Grade</button>
+    
+      <!-- RESULTS -->
+      <p id="gradeResult"></p>
 
-    <!-- EVALUATION  -->
-    <button id="checkButton">Check Grade</button>
-    
-    <!-- RESULTS -->
-    <p id="gradeResult"></p>
+    </main>
 
     <script src="script.js"></script>
    

@@ -1,0 +1,64 @@
+/* Set basic page appearance */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eef2f7;
+}
+
+/* Center the grade checker */
+main {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 26px;
+  background-color: gainsboro;
+  border: 1px solid dimgray;
+  border-radius: 12px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Style the mark input */
+#gradeInput{
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  
+}
+
+/* highlight the mark input when it is focused */
+#gradeInput{
+  outline: 2px solid #696969 ;
+  outline-offset: 2px;
+}
+
+/* Style check Grade button */
+#checkButton {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 2em;
+  background-color: #708090 ;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#checkButton:hover{
+  transform: scale(1.05);
+}
+
+/*
+/*#gradeResult {
+
+}
+ */
