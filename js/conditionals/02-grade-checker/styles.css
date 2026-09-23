@@ -1,4 +1,4 @@
-/* Set basic page appearance */
+/* Page reset and typography */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,9 +7,11 @@ body {
 
 /* Center the grade checker */
 main {
+  /* center the application horizontally */
   max-width: 400px;
   margin: 100px auto;
   padding: 26px;
+  /* box styling */
   background-color: gainsboro;
   border: 1px solid dimgray;
   border-radius: 12px;
@@ -27,6 +29,7 @@ label {
 /* Style the mark input */
 #gradeInput{
   display: block;
+  /* Input sizing */
   width: 80%;
   box-sizing: border-box;
   padding: 10px;
@@ -36,7 +39,7 @@ label {
 }
 
 /* highlight the mark input when it is focused */
-#gradeInput{
+#gradeInput:focus{
   outline: 2px solid #696969 ;
   outline-offset: 2px;
 }
