@@ -1,17 +1,13 @@
-/* Page reset and typography */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #eef2f7;
 }
 
-/* Center the grade checker */
 main {
-  /* center the application horizontally */
   max-width: 400px;
   margin: 100px auto;
   padding: 26px;
-  /* box styling */
   background-color: gainsboro;
   border: 1px solid dimgray;
   border-radius: 12px;
@@ -26,10 +22,8 @@ label {
   font-weight: bold;
 }
 
-/* Style the mark input */
 #gradeInput{
   display: block;
-  /* Input sizing */
   width: 80%;
   box-sizing: border-box;
   padding: 10px;
@@ -38,13 +32,11 @@ label {
   
 }
 
-/* highlight the mark input when it is focused */
 #gradeInput:focus{
   outline: 2px solid #696969 ;
   outline-offset: 2px;
 }
 
-/* Style check Grade button */
 #checkButton {
   width: 100%;
   padding: 10px;
@@ -60,8 +52,13 @@ label {
   transform: scale(1.05);
 }
 
-/*
-/*#gradeResult {
-
+#gradeResult {
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  margin-top: 24px;
+  font-size: 1.2rem;
+  border: 1px solid dimgray;
+  border-radius: 8px;
 }
- */
+

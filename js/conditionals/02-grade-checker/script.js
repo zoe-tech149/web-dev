@@ -20,7 +20,6 @@ checkButton.addEventListener("click", function () {
   }
 });
 
-// Clear old results  when the mark input changes
 gradeInput.addEventListener("input", function () {
   gradeResult.textContent = "";
 });
