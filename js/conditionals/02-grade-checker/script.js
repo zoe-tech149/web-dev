@@ -15,6 +15,8 @@ checkButton.addEventListener("click", function(){
     gradeResult.textContent = "Distinction";
   } else if (mark >= 50) {
     gradeResult.textContent = "Pass";
+  } else {
+    gradeResult.textContent = "Fail";
   }
 
 })
