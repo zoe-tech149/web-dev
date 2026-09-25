@@ -1,5 +1,3 @@
-console.log("js connected");
-
 // DOM CONNECTIONS
 
 const gradeInput = document.getElementById("gradeInput");
@@ -12,10 +10,10 @@ checkButton.addEventListener("click", function(){
   
   // Check whether a mark was entered
   if (mark === "") {  
-    gradeResult.textContent ="Enter mark";
-  }
-
-
+    gradeResult.textContent = "Enter mark";
+  } else if (mark >= 80) {
+    gradeResult.textContent = "Distinction";
+  } 
 
 })
 
