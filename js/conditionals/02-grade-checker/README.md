@@ -37,6 +37,15 @@ If no mark is entered:
                                ↓       ↓         ↓
                              Fail     Pass    Distinction
 
+# Grade Checker Tests
 
+|Grade           |Expected output    | Output       |
+|----------------|-------------------|--------------|
+| empty          |  Enter mark       | Enter mark   |
+| 0              |  Fail             | Fail         |
+| 50             |  Pass             | Pass         |
+| 79             |  Pass             | Pass         |
+| 80             |  Distinction      | Distinction  |
+| 100            |  Distinction      | Distinction  |
 
 
