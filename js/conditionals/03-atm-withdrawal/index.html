@@ -18,17 +18,31 @@
       
       <h1>ATM Withdrawal</h1>
 
-      <p>Available Balance: R5000</p>
+      <p>Available Balance: R5,000.00</p>
 
-      <label for="withdrawalAmount">Withdrawal amount: </label>
+      <form id="withdrawalForm">
+        
+        <label for="withdrawalAmount">Withdrawal amount: </label>
 
-      <input 
-        type="number"
-        id="withdrawalAmount"
-        min="0"
-      >
+        <div>
+          
+          <span class="currency">R</span>
 
-      <button id="withdrawButton">Withdraw</button>
+          <input 
+            id="withdrawalAmount"
+            name="withdrawalAmount"
+            type="number"
+            min="1"
+            step="50"
+            placeholder="e.g 500"
+            required
+          >
+
+          <button id="withdrawButton">Withdraw</button>
+
+        </div>
+
+      </form>
 
       <p id="withdrawalResult"></p>
 
