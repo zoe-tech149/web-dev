@@ -1,0 +1,30 @@
+:root {
+  --navy: #152238;
+  --blue:#2563eb;
+  --blue-dark: #1d4ed8;
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #dbe3ef;
+  --background: #eef4fb;
+  --success: #15803d;
+  --error: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #dbeafe, transparent 38%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.atm{
+  width: min(100%, 480px);
+}

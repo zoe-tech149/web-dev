@@ -14,37 +14,67 @@
 
   <body>
 
-    <main id="ATM">
+    <main class="atm">
+
+      <section class="atm-card">
       
-      <h1>ATM Withdrawal</h1>
+        <h1>ATM Withdrawal</h1>
 
-      <p>Available Balance: R5,000.00</p>
+        <p class="intro">Enter an amount to withdraw from your account.</p>
 
-      <form id="withdrawalForm">
-        
-        <label for="withdrawalAmount">Withdrawal amount: </label>
+        <div class="balance-box">
 
-        <div>
-          
-          <span class="currency">R</span>
+          <span>Available Balance</span>
 
-          <input 
-            id="withdrawalAmount"
-            name="withdrawalAmount"
-            type="number"
-            min="1"
-            step="50"
-            placeholder="e.g 500"
-            required
-          >
-
-          <button id="withdrawButton">Withdraw</button>
+          <strong>R5,000.00</strong>
 
         </div>
 
+        <form id="withdrawalForm">
+        
+          <label for="withdrawalAmount">Withdrawal amount: </label>
+
+          <div class="input-row">
+          
+            <span class="currency">R</span>
+
+            <input 
+              id="withdrawalAmount"
+              name="withdrawalAmount"
+              type="number"
+              min="1"
+              step="50"
+              placeholder="e.g 500"
+              required
+            >
+          </div>
+
+          <button id="withdrawButton" type="submit">Withdraw</button>
+
       </form>
 
+      <p id="message" class="message" role="status" aria-live="polite">Your transaction message will appear here.</p>
+
+      <div class="rules">
+
+        <h2>Withdrawal rules</h2>
+
+        <ul>
+
+          <li>Amount must be greater than zero.</li>
+
+          <li>Amount must be multiple of R50</li>
+
+          <li>Maximum withdrawal per transaction: R2,000.</li>
+
+          <li>Amount cannot be greater than your balance</li>
+
+        </ul>
+
+      </div>
+
       <p id="withdrawalResult"></p>
+      </section>
 
     </main>
     
