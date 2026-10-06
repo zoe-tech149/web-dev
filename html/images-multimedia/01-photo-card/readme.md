@@ -10,7 +10,7 @@ Create a profile card that presents a person’s photo, name, and short descript
 * [x] Add a profile image
 * [x] Provide meaningful `alt` text
 * [x] Add the person's name
-* [x] Add a short description
+* [x] Add a short description 
 * [x] Style the card with CSS
 * [x] Test the result in the browser
 
