@@ -7,16 +7,11 @@
 **Goal:**
 Create a simple HTML page that shows the things I normally do during my day.
 
-
-**Why:**
-
-
-
 ## 2. Requirements
 
-* [ ] A proper HTML document structure
-* [ ] A page title: My Daily Routine
-* [ ] A main heading displaying My Daily Routine
+* [x] A proper HTML document structure
+* [x] A page title: My Daily Routine
+* [x] A main heading displaying My Daily Routine
 * [ ] A collection of atleast 6 daily activities
 * [ ] Activities must be represented using the appropriate HTMLlist structure
 * [ ] Each activity must be a individual item in the list
