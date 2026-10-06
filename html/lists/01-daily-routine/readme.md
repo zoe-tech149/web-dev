@@ -1,89 +1,69 @@
-# Daily Routine
+# 01 — My Daily Routine
 
-> 
+## Overview
 
-## 1. Problem
+A simple HTML page that represents a collection of daily activities using an unordered list.
 
-**Goal:**
-Create a simple HTML page that shows the things I normally do during my day.
+## Problem
 
-## 2. Requirements
+Create a webpage that displays daily activities where the order of the activities does not carry meaning.
 
-* [x] A proper HTML document structure
-* [x] A page title: My Daily Routine
-* [x] A main heading displaying My Daily Routine
-* [ ] A collection of atleast 6 daily activities
-* [ ] Activities must be represented using the appropriate HTMLlist structure
-* [ ] Each activity must be a individual item in the list
-* [ ] []
+## Requirements
 
-## 3. Concepts Applied
+* Create a valid HTML document.
+* Add a page title and main heading: **My Daily Routine**.
+* Display at least six daily activities.
+* Represent the activities using an unordered list.
+* Represent each activity as an individual list item.
+* Use HTML only.
 
-**HTML**
+## Concepts
 
-* 
-* 
+* HTML document structure
+* `<ul>` — unordered list
+* `<li>` — list item
+* Semantic HTML
+* Parent-child relationships in HTML
 
-> 
+## Solution
 
-## 4. Implementation
+The page uses `<ul>` to define the unordered list and `<li>` to represent each individual activity.
 
+```html
+<ul>
+  <li>Wake up early</li>
+  <li>Pray</li>
+  <li>Deep work sessions</li>
+  <li>Lunch</li>
+  <li>Reading</li>
+  <li>Dinner</li>
+</ul>
+```
 
+## Key Learning
 
-## 5. Challenges & Solutions
+The browser can render text placed directly inside a `<ul>`, but proper list semantics require each item to be represented with `<li>`.
 
-### Challenge: []
+`<ul>` defines the type of collection, while `<li>` defines the individual items within it.
 
-**Problem:**
+## Testing
 
-**Solution:**
-[]
+Verified that:
 
-**Lesson:**
-[]
+* All six activities render correctly.
+* Each activity appears as a separate list item.
+* The browser generates the list markers automatically.
+* No numbers or bullet characters were manually typed.
+* The HTML structure is properly nested.
 
-## 6. Testing
+## Demo
 
-* [ ] []
-* [ ] []
-* [ ] []
+**Screenshot:** 
 
-**Result:**
-[]
+![Daily Routine](assets/daily-routine.png)
 
-## 7. What I Learned
+`assets/screenshot.png`
 
-* []
-* []
-* []
+## Status
 
-## 8. Reflection
-
-**What can I do now that I couldn't do before?**
-
-[]
-
-**What would I improve next?**
-
-[]
-
-## 9. Demo
-
-**Screenshot**
-
-[]
-
-
-## 10. Technologies
-
-* [HTML]
-
----
-
-## 11. Status
-
-**Completed:** []
-
-**Commit:** `[]`
-
-**Status:** 
+✅ Completed
