@@ -1,4 +1,4 @@
-const profileName = "Zama";
+const profileName = "Zoe";
 const profileAge = 20;
 const profileLocation = "Sydney";
 const profileSpecialization = "Web development";
